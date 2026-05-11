@@ -8,11 +8,6 @@ This project is a **custom automated Excel data entry form** designed to streaml
 
 The tool enhances data accuracy, reduces manual work, and maintains a professional HR workflow.
 
-## 📥 Download
-
-**📊 Download Automated Data Entry Form (https://github.com/wisemansg/advancedexcel/raw/main/assets/Automated%20Data%20Entry%20Form%20for%20newly%20joint%20employees%20in%20the%20company.xlsm)**
-> *Macro-Enabled Workbook (.xlsm) – Click above to download*
-
 ## 📸 Screenshots
 
 ### 1. Main Data Entry Form
@@ -26,8 +21,7 @@ The tool enhances data accuracy, reduces manual work, and maintains a profession
 
 ## 📥 Download
 
-**📊 Download Automated Data Entry Form (https://github.com/wisemansg/advancedexcel/raw/main/assets/Automated%20Data%20Entry%20Form%20for%20newly%20joint%20employees%20in%20the%20company.xlsm)**
-> *Macro-Enabled Workbook (.xlsm) – Click above to download*
+ [Download Automated Data Entry Form.xlsm](https://raw.githubusercontent.com/wisemansg/advancedexcel/main/assets/Automated%20Data%20Entry%20Form%20for%20newly%20joint%20employees%20in%20the%20company.xlsm)
 
 ## ✨ Key Features
 
