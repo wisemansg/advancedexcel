@@ -64,3 +64,131 @@ The tool enhances data accuracy, reduces manual work, and maintains a profession
 - PDF export option
 
 **Made with ❤️ for efficient HR processes**
+
+---
+
+# 💰 Automated Excel Finance Tracker
+
+**Smart Personal Finance Management Dashboard in Excel**  
+*Track spending, auto-classify transactions, monitor savings goals, and visualize your financial health — all automatically.*
+
+## 📋 Project Overview
+
+This **Automated Finance Tracker** eliminates manual data entry by allowing you to simply paste your bank transactions. Excel then automatically classifies every transaction, updates PivotTables, refreshes charts, and manages your savings goals with priority-based allocation. Built for clarity, automation, and ease of use.
+
+## 📥 Download
+
+- **Direct Download:**  
+  👉 [Download Automated Finance Tracker.xlsm](https://raw.githubusercontent.com/wisemansg/advancedexcel/main/assets/automated_finance_tracker.xlsx)
+
+## 📸 Project Screenshots
+
+### Transaction Table (Data Entry Area)
+![Transaction Table](https://github.com/wisemansg/advancedexcel/raw/main/assets/Transaction%20Table.png)
+
+### Category Classification Table
+![Category Classification](https://github.com/wisemansg/advancedexcel/raw/main/assets/Category%20Classification.png)
+
+### PivotTables Analysis & Working Sheet
+![PivotTables Analysis](https://github.com/wisemansg/advancedexcel/raw/main/assets/PivotTables%20Analysis%20and%20Working%20Sheet.png)
+
+### Net Income PivotTable
+![Net Income PivotTable](https://github.com/wisemansg/advancedexcel/raw/main/assets/Net%20Income%20PivotTable.png)
+
+### Dashboard 1 – Overview
+![Dashboard 1](https://github.com/wisemansg/advancedexcel/raw/main/assets/Dashboard%201.png)
+
+### Dashboard 2 – Detailed View
+![Dashboard 2](https://github.com/wisemansg/advancedexcel/raw/main/assets/Dashboard%202.png)
+
+### Waterfall Chart – Where the Money Really Goes
+![Waterfall Chart](https://github.com/wisemansg/advancedexcel/raw/main/assets/Waterfall%20Chart%20(Where%20the%20money%20really%20goes).png)
+
+### Treemap Chart – Category Spending Comparison
+![Treemap Chart](https://github.com/wisemansg/advancedexcel/raw/main/assets/Treemap%20Chart%20(The%20Fastest%20Way%20to%20Compare%20Category%20Spending).png)
+
+### Savings Goals Tracker
+![Savings Goals](https://github.com/wisemansg/advancedexcel/raw/main/assets/Savings%20Goals%20(Automatically%20Allocate%20Savings%20by%20Priority).png)
+
+## ✨ Key Features
+
+- One-click transaction import (paste from bank)
+- **Automatic transaction classification** using XLOOKUP + SEARCH
+- Dynamic PivotTables and Charts
+- Waterfall & Treemap visualizations
+- Automated Savings Goals tracker with priority allocation
+- Clean Dashboard with real-time insights
+
+## 🛠️ Core Formulas Used
+
+### 1. Income/(Expense) Column
+```excel
+=[@[Credit (Income)]] - [@[Debit (Spend)]]
+
+2. Automatic Classification (Subcategory, Category, Category Type)
+
+=XLOOKUP(
+    TRUE,
+    ISNUMBER(SEARCH(Categories[Description],[@Description])),
+    Categories[Subcategory],
+    "Uncategorised"
+)
+
+3. Savings Goals – Total Net Savings
+
+=-SUMIFS(tblTrans[Income/(Expense)], tblTrans[Subcategory], "Savings")
+
+4. Cumulative Target
+
+=SUMIFS([Target], [Priority], "<=" & [@Priority])
+
+5. Allocated Savings (Using LET Function)
+
+=LET(
+    total,  TotalSavings,
+    prev,   [@[Cum Target]] - [@Target],
+    avail,  total - prev,
+    MAX(0, MIN([@Target], avail))
+)
+
+6. % Funded
+=IF([@Target]=0, 0, [@Allocated]/[@Target])
+
+7. Months to Goal
+=IF(
+    TargetSavedMonthly<=0, "",
+    MAX(0, ROUNDUP(([@[Cum Target]] - TotalSavings) / TargetSavedMonthly, 0))
+)
+
+## 🛠️ How It Works
+
+1. **Paste transactions** into the `tblTrans` table on the Transactions sheet.
+2. **Auto-classification** happens instantly using XLOOKUP and keyword matching.
+3. **PivotTables** update automatically with the new data.
+4. **Dashboards & Charts** refresh with one click using **Refresh All**.
+5. **Savings Goals** automatically allocate available savings by priority order.
+
+## 🧰 Technologies & Techniques Used
+
+- Excel Tables (`tblTrans`, `tblCat`, `tblGoals`)
+- Structured References
+- XLOOKUP + SEARCH for smart classification
+- LET Function for complex calculations
+- Advanced PivotTables
+- Dynamic Charts (Waterfall, Treemap, Donut)
+- Sheet Protection & Named Ranges
+
+## 📌 Future Enhancements
+
+- Power Query auto-import from bank CSV
+- Monthly budget comparison
+- Expense forecasting
+- Interactive slicers on dashboard
+
+**Made with ❤️ to bring financial clarity and control**
+
+
+
+
+
+
