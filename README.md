@@ -121,8 +121,8 @@ This **Automated Finance Tracker** eliminates manual data entry by allowing you 
 
 ## 🛠️ Core Formulas Used
 
-### 1. Income/(Expense) Column
-```excel
+1. Income/(Expense) Column
+
 =[@[Credit (Income)]] - [@[Debit (Spend)]]
 
 2. Automatic Classification (Subcategory, Category, Category Type)
@@ -159,6 +159,7 @@ This **Automated Finance Tracker** eliminates manual data entry by allowing you 
     TargetSavedMonthly<=0, "",
     MAX(0, ROUNDUP(([@[Cum Target]] - TotalSavings) / TargetSavedMonthly, 0))
 )
+
 
 ## 🛠️ How It Works
 
