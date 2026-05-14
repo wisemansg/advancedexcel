@@ -1,3 +1,4 @@
+# 👥 PROJECT 1
 # 👥 Employee Data Entry System
 
 **Automated Excel Form for Employee Onboarding & Payroll Management**
@@ -66,7 +67,7 @@ The tool enhances data accuracy, reduces manual work, and maintains a profession
 **Made with ❤️ for efficient HR processes**
 
 ---
-
+# 👥 PROJECT 2
 # 💰 Automated Excel Finance Tracker
 
 **Smart Personal Finance Management Dashboard in Excel**  
