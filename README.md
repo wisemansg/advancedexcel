@@ -186,9 +186,64 @@ This **Automated Finance Tracker** eliminates manual data entry by allowing you 
 - Interactive slicers on dashboard
 
 **Made with ❤️ to bring financial clarity and control**
+---
+# 📅 PROJECT 3 (Excel Task Tracker)
 
+**Dynamic • Visual • Zero Macros**  
+A powerful, fully automated **Assignment & Task Management System** in Excel — built for students and professionals who need clarity and control over their deadlines.
 
+## 📥 Download
 
+- **Direct Download:**  
+  👉 [Download Excel Task Tracker.xlsx](https://raw.githubusercontent.com/wisemansg/advancedexcel/main/assets/excel_task_tracker.xlsx)
 
+## 📸 Project Screenshots
+
+### 1. Lists Sheet – Dynamic Drop-down Sources
+![Lists for Drop-downs](https://github.com/wisemansg/advancedexcel/raw/main/assets/Lists%20(for%20drop-downs).png)
+
+### 2. Main Task Tracker Table
+![Task Tracker 1](https://github.com/wisemansg/advancedexcel/raw/main/assets/Task%20Tracker%201.png)
+
+### 3. Tracker with Active Slicers & Conditional Formatting
+![Task Tracker 2](https://github.com/wisemansg/advancedexcel/raw/main/assets/Task%20Tracker%202.png)
+
+### 4. Tracker with Status Filters Applied
+![Task Tracker 3](https://github.com/wisemansg/advancedexcel/raw/main/assets/Task%20Tracker%203.png)
+
+### 5. Schedule View – Mini Gantt Calendar (Overview)
+![Task Schedule 1](https://github.com/wisemansg/advancedexcel/raw/main/assets/Task%20Schedule%20(Mini%20Calendar)%201.png)
+
+### 6. Schedule View – Due Date Highlights
+![Task Schedule 2](https://github.com/wisemansg/advancedexcel/raw/main/assets/Task%20Schedule%20(Mini%20Calendar)%202.png)
+
+## ✨ Key Features
+
+- Smart drop-downs powered by dynamic lists
+- Automatic **Days Available** countdown with overdue alerts
+- Beautiful conditional formatting (color-coded status + strikethrough)
+- Interactive **Slicers** for instant filtering
+- Live **Mini Gantt Schedule** view using dynamic arrays
+- Fully responsive — add tasks and everything updates automatically
+
+## 🛠️ Core Formulas Used
+
+1. Days Available (Countdown)
+=[@Due] - TODAY()
+
+2. Dynamic Filtered & Sorted Schedule (Active Tasks)
+=SORT(
+    FILTER(Tasks[[Task]:[Time Req'd]], Tasks[Status]<>"Completed"),
+    4
+)
+
+3. Auto-Generated Date Row for Calendar
+=SEQUENCE(, 
+    MAX(Tasks[Due]) - MIN(Tasks[Due]) + 1, 
+    MIN(Tasks[Due])
+)
+
+4. Day of Week Row (Spill Reference)
+=G5#     // References the SEQUENCE row above
 
 
