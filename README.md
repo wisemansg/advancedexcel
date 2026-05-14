@@ -187,7 +187,7 @@ This **Automated Finance Tracker** eliminates manual data entry by allowing you 
 
 **Made with ❤️ to bring financial clarity and control**
 ---
-# 📅 PROJECT 3 (Excel Task Tracker)
+# 👥 PROJECT 3 (Excel Task Tracker)
 
 **Dynamic • Visual • Zero Macros**  
 A powerful, fully automated **Assignment & Task Management System** in Excel — built for students and professionals who need clarity and control over their deadlines.
